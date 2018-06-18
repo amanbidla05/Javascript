@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
+    <script>
+        var list = [];
+
+        function AddItemToExistingList() {
+            var NoofItems = list.length;
+
+            list[NoofItems] = document.getElementById("textValue").value;
+            DisplayResult();
+        }
+
+        function DisplayResult() {
+            var n = list.length;
+
+            document.getElementById("counts").innerHTML = "No of items added:" + n.toString();
+            var ItemsListDiv = document.getElementById("ItemsList");
+
+            while (ItemsListDiv.hasChildNodes()) {
+                ItemsListDiv.removeChild(ItemsListDiv.lastChild);
+            }
+            for (var i = 0; i < n; i++) {
+                var NewDiv = document.createElement("div");
+                NewDiv.innerHTML = "Item" + (i + 1).toString() + "of" + n.toString() +
+                    "is" + list[i];
+
+                ItemsListDiv.appendChild(NewDiv);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Enter Value:</td>
+            <td>
+                <input type="text" id="textValue">
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="button" value="Add to list" onclick="AddItemToExistingList();">
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div id="counts">
+
+    </div>
+    <br>
+    <div id="ItemsList"></div>
+
+</body>
+
+</html>

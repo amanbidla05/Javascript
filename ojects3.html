@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples array if js object</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script>
+        var emp = function(name,sal){
+            this.name = name;
+            this.sal = sal;
+
+            this.getAnnSal = function(){
+                return this.sal * 12;
+            };    
+        };
+
+        var arryEmp1 = [];
+
+        arryEmp1[0] = new emp("ravi",1000);
+        arryEmp1[1] = new emp("shiva",2000);
+        arryEmp1[2] = new emp("arun",3000);
+        arryEmp1[3] = new emp("shankar",4000); 
+
+
+        for ( var i = 0; i < arryEmp1.length; i++){
+            var e = arryEmp1[i];
+
+            alert(e.name + " earns annula sal " + e.getAnnSal());
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    var emp1 = [];
+    emp1["empno"] = 101010;
+    emp1["name"] = 'Jhon';
+    emp1["sal"] = 50000;
+    emp1["dept"] = "Accounts";
+
+    var emp2 = [];
+    emp2["empno"] = 202020;
+    emp2["name"] = 'Mike';
+    emp2["sal"] = 80000;
+    emp2["dept"] = "Sales";
+
+
+    var emp3 = [];
+    emp3["empno"] = 303030;
+    emp3["name"] = 'Danny';
+    emp3["sal"] = 40000;
+    emp3["dept"] = "Production";
+
+    var emps = [emp1,emp2,emp3];
+
+    function displayEmps(){
+        var n = emps.length;
+
+        var result=document.getElementById("result");
+        for(var i=0; i<n; i++){
+
+            //getting the i'th  element from the emps collection
+            var emp = emps[i];
+            for(var k in emp){
+                var newdiv = document.createElement("div");
+                newdiv.innerHTML= k + ":" + emp[k];
+                result.appendChild(newdiv);
+            }
+        }
+    }
+    
+
+</script>
+</head>
+<body>
+   <input type="button" value="Show EMployees" onclick="displayEmps();">
+   <hr>
+   <div id="result"></div> 
+</body>
+</html>

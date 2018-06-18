@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    var one = [1000,"Ravi",50000,true];
+
+
+    function displayResult(){
+        var n = one.length;
+        document.getElementById("count").innerHTML = "No of Items:" + n.toString();
+
+        var items = document.getElementById("items");
+        while(items.hasChildNodes()){
+            items.removeChild(items.lastChild);
+        }
+        for(var i=0; i<n; i++){
+            var newdiv = document.createElement("div");
+            newdiv.innerHTML = " Index " + i.toString() +
+            ", item " + (i+1).toString() + 
+            " of " + n.toString() + 
+            " is " + one[i];
+
+            items.appendChild(newdiv);
+         }
+    }
+    function DoAryPush(){
+        var p = document.getElementById("txtArrayval").value;
+        one.push(p);
+        displayResult();
+    }
+    function DoAryPop(){
+        var v = document.getElementById("txtArrayval").value;
+        one.pop(v);
+        displayResult();
+    }
+    function DoAryshift(){
+        var v = document.getElementById("txtArrayval").value;
+        one.shift(v);
+        displayResult();
+    }
+    function DoAryunshift(){
+        var v = document.getElementById("txtArrayval").value;
+        one.unshift(v);
+        displayResult();
+    }
+
+</script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter any value</td>
+            <td>
+                <input  id="txtArrayval" type="text">
+            </td>
+            <td>
+                <input type="button" value="Push" onclick="DoAryPush()">
+            </td>
+            <td>
+                <input type="button" value="POP" onclick="DoAryPop()">
+            </td>
+            <td>
+                <input type="button" value="Shift" onclick="DoAryshift()">
+            </td>
+            <td>
+                <input type="button" value="UnShift" onclick="DoAryunshift()">
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div id="count"></div>
+    <br>
+    <div id="items"></div>
+</body>
+</html>

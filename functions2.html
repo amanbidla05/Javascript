@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples for Nested Functions </title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    //nested function
+    // function doProcess(a,b){
+    //     function dispSum(){
+    //         alert ("Sum of " + (a+b).toString());
+    //     }
+    //     function dispmul(){
+    //         alert ("Multiplication of " + (a*b).toString());
+    //     }
+
+    //     dispSum();
+    //     dispmul();
+    // } 
+    // doProcess(2,4);
+
+    //Function returning functions
+    /*function doProcess(a,b){
+        function dispSum(){
+            alert ("Sum of " + (a+b).toString());
+        }
+        function dispmul(){
+            alert ("Multiplication of " + (a*b).toString());
+        }
+
+        dispSum();
+        return dispmul;
+    } 
+     var a= doProcess(40,2);
+     a();*/
+
+     //Assign inner functions to outer
+     /*function doProcess(a,b){ 
+        function dispSum(){
+            alert ("Sum of " + (a+b).toString());
+        }
+
+        dispSum();
+
+        doProcess = function (a,b) {
+            alert ("Multiplication of " + (a*b).toString());
+        }
+
+    } 
+    doProcess(10,5);
+    doProcess(10,5);
+    doProcess(10,50)*/
+
+    //Functions as an array
+    /*var ary = [];
+
+    ary[0] = function(){
+        alert("First array");
+    };
+    ary[1] = function(){
+        alert("Second array");   
+    };
+    ary[2] = function(){
+        alert("Third array");   
+    };
+    ary[3] = function(){
+        alert("Fourth array");   
+    };
+
+    for(var i=0; i < ary.length; i++){
+        // var a = ary[i];
+        // a();
+        ary[i]();
+    }*/
+
+    function someAttach(){
+        var btn = document.getElementById("btn1");
+        btn.onclick = function (){
+            alert ("Hello world!");
+        };
+        btn.value = "Button has been clicked!"
+    }
+
+</script>
+</head>
+<body>
+    <!-- <input type="button" value="Show" onclick="doProcess(10,20)"> -->
+    <input id="btn1" type="button" value="Button_1">
+    <input id="btn1" type="button" value="Button_2" onclick="someAttach()">
+</body>
+</html>

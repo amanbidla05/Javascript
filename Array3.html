@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples2</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    var abc = Array(3);
+    abc[0] = 'aman';
+    abc[1] = 'bidla';
+    abc[2] = 26;
+    
+    var abc1 = Array('Ravi','kumar','30',true);
+    
+
+    var abc2 = [];
+    abc2[0] = 'Shyam';
+    abc2[1] = 'sunder';
+    abc2[2] = 26;
+
+    function displayArray(ary){
+
+        var n = ary.length;
+
+        var ResultsDiv = document.getElementById("ResultsDiv");
+
+        while(ResultsDiv.hasChildNodes()){
+            ResultsDiv.removeChild(ResultsDiv.lastChild);
+        }
+        for ( var i=0; i< n; i++){
+            var NewDiv = document.createElement("div");
+            NewDiv.innerHTML = "Item" + (i+1).toString() + "of" + n.toString() + "is" + ary[i];
+
+
+            ResultsDiv.appendChild(NewDiv);
+        }
+
+    }
+</script>
+
+</head>
+<body>
+   <input type="button" value="Show array 1" onclick="displayArray(abc);">
+   <input type="button" value="Show array 2" onclick="displayArray(abc1);">
+   <input type="button" value="Show array 3" onclick="displayArray(abc2);"> 
+   <hr>
+   <div id="ResultsDiv"></div>
+</body>
+</html>

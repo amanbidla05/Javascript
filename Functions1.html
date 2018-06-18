@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples for IIFE</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    // (
+    //     function(){
+    //         alert("Hello world");
+    //     }
+    // )();
+
+    // (
+    //     function(a,b){
+    //         alert ("Sum of " +(a+b).toString());
+    //     } 
+    // )(50,50);
+
+    // (
+    //     function(){
+    //         var s=0;
+    //         for( var i=0; i < arguments.length;i++){
+    //             s+= arguments[i];
+    //         }
+    //         alert ("Total of " + s);
+    //     }
+    // )(100,200);
+    // var s = (
+    //     function(a,b){
+    //         var c=0;
+    //         c = a-b;
+    //         return c;
+    //     }
+    // )(10,3);
+    // alert (s);
+
+
+    alert ((
+        function(a,b){
+            var c=0;
+            c = a-b;
+            return c;
+        }
+    )(100,3));
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

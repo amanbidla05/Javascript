@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    var emp = [];
+    emp["empno"] = 1111;
+    emp["name"] = 'Sai';
+    emp["sal"] = 50000;
+    emp["dept"] = "IT";
+
+
+    function displayEmp(){
+
+        var resultdiv = document.getElementById("resultdiv");
+        for(i in emp){
+            var NewDiv= document.createElement('div');
+            NewDiv.innerHTML = i + ":"  + emp[i];  
+
+            resultdiv.appendChild(NewDiv);
+        }
+    } 
+</script>
+</head>
+<body>
+    <input type="button" value="Show" onclick="displayEmp();">
+    <hr>
+    <div id="resultdiv"></div>
+</body>
+</html>

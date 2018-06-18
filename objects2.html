@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples Method accepting and returning object</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script>
+        var student = function(){
+            this.name = "";
+            this.rollno = 0;
+
+            this.setstudent = function(e){
+                this.name = e.name;
+                this.rollno = e.rollno;
+            };
+
+            this.getRollNo = function(){
+                return this.rollno = 10;
+            };
+        };
+        
+        var std1 = new student();
+        std1.name = "Ravi";
+
+        var std2 = new student();
+        std2.setstudent(std1);
+
+        alert(std2.name + " roll no is " + std2.getRollNo());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

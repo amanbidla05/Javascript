@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       /* var one1 = Array[5];
+        one1[0] = 'aman';
+        one1[1] = 'bidla';
+        one1[2] = 'male';
+        one1[3] = '27';
+        one1[4] = '30000';*/
+
+        var one1 = [];
+
+        one1[0] = 'aman';
+        one1[1] = 'bidla';
+        one1[2] = 'male';
+        one1[3] = '27';
+        one1[4] = '30000';
+
+        function disarray() {
+            var n = one1.length;
+            var Results = document.getElementById("Results");
+
+            for (var i = 0; i < n; i++) {
+                var newdiv = document.createElement("div");
+                newdiv.innerHTML = "Item" + (i + 1).toString() + "of" + n.toString() + "is" + one1[i];
+                Results.appendChild(newdiv);
+            }
+        }
+
+    </script>
+
+    <body>
+        <input type="button" value="Show Array" onclick="disarray();" />
+        <hr>
+        <div id="Results"></div>
+    </body>
+</head>
+
+</html>

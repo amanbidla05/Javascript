@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples for functions</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+<script>
+    var one = function(a,b){
+        alert ("Sum =" + (a+b).toString())
+    }
+
+    var one1 = function(){
+        s = 0;
+        for(var i=0; i < arguments.length; i++){
+            s+= arguments[i];
+        }
+        alert("Sum" + s.toString())
+    }
+
+    var one2 = function(a,b){
+        var c = 0;
+        c = a-b;
+        return c; 
+    }
+</script>
+</head>
+<body>
+    <input type="button" value="Show Messages" onclick="one(10,20)"> 
+    <input type="button" value="Show Messages1" onclick="one1(10,20,30,40,60)">
+    <input type="button" value="Show Messages2" onclick="alert(one2(40,10))">
+</body>
+</html>

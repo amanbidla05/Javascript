@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples for Methods</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+ <script>
+     var emp = function(ename, esal){
+         this.ename = ename;
+         this.esal = esal;
+
+         this.Annsal = function(){
+             return this.esal * 12;
+         };
+
+         this.Qtr = function(){
+             return this.esal * 3;
+         };
+     };
+
+     var emp1 =new emp("shankar",30000);
+     alert(emp1.Annsal());
+     alert(emp1.Qtr());
+
+; </script>
+</head>
+<body>
+    
+</body>
+</html>

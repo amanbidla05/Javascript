@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples for callback functions</title>
+<meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script>
+    function Some(a,b,one){
+        alert("Sum of " + (a+b).toString());
+        one(a,b);
+    }
+    function Somediff(p,q){
+        alert("Some diffrence " + (p-q).toString());
+    }
+
+    function mul(o,r){
+        alert("Multiplication " + (o*r).toString());
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="show" onclick="Some(100,20,Somediff)">
+    <input type="button" value="show diff" onclick="Some(100,20,mul )">
+</body>
+</html>
